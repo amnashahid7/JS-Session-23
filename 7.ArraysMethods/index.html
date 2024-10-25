@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays Methods in JS</h1>
+    <script>
+        let arr1= [1,2,3,4,5,6,7,8,9];
+        let arr2= [10,20,30,40,50];
+        let arr3= ["amna", "ali", "umer", "hammad"];
+        let length= new Array(arr1,arr2,arr3);
+        console.log(length);
+        let somelenght= new Array(arr1.sort(), arr3.toString, arr2.length);
+        console.log(somelenght);
+        let lenghtObj={
+            array1: arr1.length,
+            array2: arr2.length,
+            array3: arr3.length,
+        }
+        console.log(lenghtObj);
+
+
+        //join method to convert array into string
+        let arrayString= arr1.join("=")
+        console.log(arrayString); //1=2=3=4=5=6=7=8=9
+        console.log(typeof(arrayString));
+
+       //js pop() and push()
+       // pop = pop out last value in the array.
+       //push = push the value in last position
+       console.log(arr1); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
+       let popValue= arr1.pop();
+       console.log(popValue); //9
+       console.log(arr1); // [1, 2, 3, 4, 5, 6, 7, 8]
+    //    let pushvalue= console.log(arr1.push(44));
+    //    console.log(pushvalue);
+    arr1.push(77);
+    console.log(arr1);
+
+    //js shift and unshift
+    // shift the first value
+    // unshift= put value in first place
+    console.log(arr2);
+    arr2.shift();
+    console.log(arr2);
+    arr2.unshift(45);
+    console.log(arr2);
+
+
+    //delete element in an array
+    delete arr2[3];
+    console.log(arr2); // [45, 20, 30, empty, 50]
+
+    //concatinating arrays
+    let concatinating = arr3.concat(arr1,arr2);
+    console.log(concatinating);
+
+    //splice and slice methods
+    // splice() take 3 arguments first: where to put data, second: how much value to delete, third: valuesputting in the array
+    arr1.splice(2,0,9999,300,4444);
+    console.log(arr1);
+    arr1.splice(2,2);
+    console.log(arr1);
+
+    //slice method
+    let arrayslice= arr1.slice(2,5);
+    console.log(arrayslice);
+
+    //indexof function
+    let indexarray= arr1.indexOf(77);
+    console.log(indexarray);
+   
+// The lastIndexOf() method returns the index (position) of the last occurrence of a specified value in a string.
+
+// The lastIndexOf() method searches the string from the end to the beginning.
+
+// The lastIndexOf() method returns the index from the beginning (position 0).
+
+// The lastIndexOf() method returns -1 if the value is not found.
+
+// The lastIndexOf() method is case sensitive.
+let lastindexArray= arr1.lastIndexOf(3);
+    console.log(lastindexArray);
+
+    //array find();
+        //its return type is single vaiable on the basis of condition.
+        let array = [1,2,3,4,5,6,7,8,9];
+        let result= array.find((value,index,array)=> {
+            return value>3
+        })
+        console.log(result);
+
+         //array findIndex function.
+         let indexResult= array.findIndex(myFunction);
+
+         function myFunction(value,index,array){
+            return value>4
+         }
+         console.log("index of find value :"+ indexResult);
+
+         // array some function 
+        let id = 4;
+        let arraySome = [1,2,3,4,5,6,7,8];
+        let arraySomeResult =  arraySome.some((value,key)=>{
+            return value == id ;
+        });
+        console.log(arraySomeResult);
+
+        //js filter method 
+        // return type array
+        let arrayfil= [4,5,67,8,89,9,98];
+        let resultArrayfil= arrayfil.filter((value, key)=>{
+        return value>50 && value<100;
+        })
+
+        console.log(resultArrayfil);
+
+        //js map method
+        let arraymap= [1,2,3,4,5];
+        let resultArraymap= arraymap.map((value,key,arraymap)=>{
+        return value*2;
+        })
+
+        console.log(resultArraymap);
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+[
+  {
+    "id": 1,
+    "question": "What language defines the behavior of a web page?",
+    "A": " HTML",
+    "B": "CSS",
+    "C": "XML",
+    "D": "JAVASCRIPT",
+    "answer":"JAVASCRIPT"
+  },
+  {
+    "id": 2,
+    "question": "To insert a JavaScript into an HTML page, which tag is used?",
+    "A": " < script=â€™javaâ€™>",
+    "B": " < javascript>",
+    "C": "< script>",
+    "D": "< js>",
+    "answer":"< script>"
+  },
+  {
+    "id": 3,
+    "question": "Which of the below is used in Java script to insert special characters?",
+    "A": "&",
+    "B": "(BackSlash)",
+    "C": "-",
+     "D": "%",
+     "answer":"(BackSlash)"
+  },
+ 
+  {
+    "id": 4,
+    "question": "What is the alternate name for Java script?",
+    "A": "LimeScript",
+    "B": "Both a and d",
+    "C": "ECMScript",
+    "D": "ECMAScript ",
+    "answer":"ECMAScript"
+  },
+
+  {
+    "id": 5,
+    "question": "How to append a value to an array of Java Script?",
+    "A": "arr[arr.length] = value ",
+    "B": "arr[arr.length+1] = new Arrays()",
+    "C": "arr[arr.length-1] = value",
+    "D": "arr[arr.length*1] = value",
+    "answer":"arr[arr.length] = value "
+  },
+  
+  {
+    "id": 6,
+    "question": "Which is the correct way to write a JavaScript array?",
+    "A": "var txt = new Array(1:'arr',2:'kimm',3:'jimm')",
+    "B": "var txt = new Array:1=(' arr ')2=('kim')3=('jim')",
+    "C": " var txt = new Array('arr ','kim','jim')",
+    "D": "var txt = new Array='arr ','kim','jim'",
+    "answer":"var txt = new Array('arr ','kim','jim')"
+  },
+ 
+  {
+    "id": 7,
+    "question": " Which of the following is correct to write â€œHello Worldâ€ on the web page?",
+    "A": "System.out.println(â€œHello Worldâ€)",
+    "B": " print(â€œHello Worldâ€)",
+    "C": "document.write(â€œHello Worldâ€) ",
+    "D": "response.write(â€œHello Worldâ€)",
+    "answer":"document.write(â€œHello Worldâ€)"
+  },
+
+  {
+    "id": 8,
+    "question": "Which of the following is used to capture all click events in a window?",
+    "A": "window.captureEvents(Event.CLICK);",
+    "B": "window.routeEvents(Event.CLICK );",
+    "C": "window.handleEvents (Event.CLICK);",
+    "D": "window.raiseEvents(Event.CLICK );",
+    "answer":"window.captureEvents(Event.CLICK)"
+  },
+   
+  {
+    "id": 9,
+    "question": "Which of the ways below is incorrect of instantiating a date?",
+    "A": "new Date(dateString)",
+    "B": "new Date()",
+    "C": "new Date(seconds)",
+    "D": "new Date(year, month, day, hours, minutes, seconds, milliseconds)",
+    "answer":"new Date(seconds)"
+  },
+  
+  {
+    "id": 10,
+    "question": "Which of the following is a client-side Java Script object?",
+    "A": "File",
+    "B": "Function",
+    "C": " FileUpload",
+    "D": "Time",
+    "answer":"File"
+  }
+]
+

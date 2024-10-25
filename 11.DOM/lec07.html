@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <div class="main">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum perferendis alias, quos, beatae rem aliquam pariatur vitae ut iure, dignissimos assumenda doloremque modi?
+        </h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed veritatis facere sequi minus quisquam facilis nulla ab cum ea nostrum fuga officiis, quia voluptas doloremque, labore laboriosam vitae delectus alias hic! Delectus, doloremque assumenda.
+        </p>
+    </div>
+    <div class="form">
+        <label for="text">Enter Text Here</label>
+        <input type="text" id="text" name="text" value="" onkeyup="print(this)">
+    </div>
+    <button id="apply" onclick="myFun(this)" >Apply</button>
+    <script>
+        //this keyword referes to the owner of object and if it directly place in script it represents global object(window object).
+        // console.log(this);
+        // function myFun(id) {
+        //     console.log(id.style.color = "red");
+        // }
+    </script>
+    <script>
+        // let button = document.getElementById("apply");
+        // button.onclick = ()=>{
+        //     document.querySelector(".main h1").innerHTML = "zaeem";
+        // }
+        let input = document.querySelector(".form input");
+        input.onkeyup = ()=>{
+            document.querySelector(".main h1").innerHTML = input.value;
+        } 
+        let print = (id)=>{
+            document.querySelector(".main h1").innerHTML = id.value;
+        } 
+    </script>
+</body>
+</html>

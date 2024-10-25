@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Practice Question</title>
+</head>
+<body>
+    <h1>Parking car slots Example</h1>
+    <script>
+        let totalSlot= prompt("Enter total no of parking slot?");
+        let person1Cars= parseInt(prompt("Enter total no of cars person one has?"));
+       
+        let person2Cars= parseInt(prompt("Enter total no of cars person two has?"));
+    
+        let person3Cars=parseInt(prompt("Enter total no of cars person three has?")) ;
+        sumOFcar1$car2 = person1Cars+person2Cars;
+        sumOFthree= sumOFcar1$car2+person3Cars;
+        
+        P1Cars();
+       P2Cars();
+       P3Cars();
+        // totalSpace();
+
+
+        function P1Cars(){
+            if (person1Cars<=totalSlot) {
+           alert ("person one has " + person1Cars + " cars");
+        } 
+        else {
+            alert("Not have enough space for person 1");
+        }
+        }
+        function P2Cars(){
+            if((sumOFcar1$car2<=totalSlot)){
+                alert("person two has " + person2Cars + " cars");
+            } 
+            else {
+            alert("Not have enough space for person 2");
+        }
+         }
+         function P3Cars(){
+            if (sumOFthree<=totalSlot) {
+                
+                alert("person  three has " + person3Cars + " cars");
+            } 
+            else {
+            alert("Not have enough space for person 3");
+        }
+
+            }
+       
+   
+        // function sumOFcar1$car2(){
+        //     console.log(person1Cars+person2Cars) ;
+        // }
+
+        // function sumOFthree(){
+        //     console.log(person1Cars+person2Cars+person3Cars);
+        // }
+
+        // function totalSpace(){
+        //     if (sumOFcar1$car2<totalSlot) {
+        //    alert ("person one has " + person1Cars + " cars");
+        // } 
+        // else {
+        //     alert("Not have enough space");
+        // }
+        // }
+
+
+
+
+            
+        
+        
+
+
+
+
+
+        // else if(sumOFcar1$car2<totalSlot){
+        //     console.log("person two has " + person2Cars + " cars");
+        // }
+        // else if(sumOFthree<totalSlot){
+        //     console.log("person three has " + person3Cars + " cars");
+        // }
+        // else {
+        //     alert("Not have enough space");
+        // }
+    </script>
+</body>
+</html>

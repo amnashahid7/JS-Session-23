@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="parent">
+        <p>First sibling</p>
+        <p>Second sibling</p>
+        <p>Third sibling</p>
+    </div>
+
+    </div>
+    <script>
+        // const id = document.getElementById("parent");
+        // const nextSibling = id.parentElement.nextElementSibling;
+        // console.log(nextSibling);
+        const id = document.getElementById("parent");
+
+        // Accessing parent element
+        const parentElement = id.parentElement;
+        console.log("Parent Element:");
+        console.log(parentElement);
+        
+
+        // Accessing next sibling element
+        const nextSibling = id.nextElementSibling;
+        console.log(nextSibling); 
+        console.log("Next Sibling Element:");
+        
+    </script>
+</body>
+
+</html>

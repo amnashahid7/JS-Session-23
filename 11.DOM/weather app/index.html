@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEATHER APP</title>
+</head>
+<style>
+    .sunnyimg {
+        margin-top: 40px;
+        margin-left: 500px;
+
+    }
+
+    .sunny {
+        border: 2px solid #555;
+        border-radius: 15px;
+        position: relative;
+    }
+
+    .imgTag {
+        position: relative;
+        top: -296px;
+        right: -216px;
+    }
+
+    .inputTemp {
+        position: relative;
+        top: -430px;
+        right: -32px;
+        font-size: 30px;
+        ;
+    }
+
+    .feels {
+        position: relative;
+        top: -457px;
+        right: -31px;
+        ;
+    }
+
+    .cloudyimg {
+        margin-top: 40px;
+        margin-left: 500px;
+    }
+
+    .cloudy {
+        border: 2px solid #555;
+        border-radius: 15px;
+        position: relative;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <h1>WEATHER APP in JS</h1>
+    </div>
+    <!-- <button id="btn_1">Show 1</button>
+    <button id="btn_2">Show 2</button> -->
+
+    <div class="form">
+        <label for="input">Enter temperature.</label>
+        <input type="text" id="text" name="text" value="" onkeyup="myFun(event)">
+    </div>
+    <!-- <button onclick="myFun()">CLICK</button> -->
+    <p id="demo"></p>
+    <div class="sunnyimg" id="sunnyimg" style="display: none;">
+        <img class="sunny" src="/11.DOM/images/sunny.png" alt="sunny" width="350px" height="400px">
+        <h4 class="imgTag">MOSTLY SUNNY</h4>
+        <h2 class="inputTemp">Ex:34F</h2>
+        <h4 class="feels"> Feels like</h4>
+    </div>
+    <div class="cloudyimg" id="cloudyimg" style="display: none;">
+        <img class="cloudy" src="/11.DOM/images/cloudy.png" alt="cloudy" width="350px" height="400px">
+        <h4 class="imgTag">MOSTLY Cloudy</h4>
+        <h2 class="inputTemp">Ex: 56F</h2>
+        <h4 class="feels"> Feels like</h4>
+    </div>
+
+
+    <script>
+        function myFun(e) {
+            // console.log(e);
+            if (e.key == "Enter") {
+                let temp = document.getElementById("text").value;
+                //document.getElementById("demo").innerHTML= temp;
+
+                console.log(temp);
+                if (temp >= 30) {
+
+                    document.getElementById("sunnyimg").style.display = "block";
+                    document.getElementById("cloudyimg").style.display = "none";
+                    document.querySelector(".sunnyimg h2").innerHTML = temp;
+                } else if (temp < 30) {
+
+                    document.getElementById("sunnyimg").style.display = "none";
+                    document.getElementById("cloudyimg").style.display = "block";
+                    document.querySelector(".cloudyimg h2").innerHTML = temp;
+                }
+
+            }
+        }
+
+
+
+        myFun();
+        let temp1 = document.getElementById(text.value);
+        console.log(temp1);
+
+
+        let input = document.getElementsByClassName(".form input");
+
+        input.onkeyup = () => {
+            const value = input.value;
+            console.log(value);
+            if (e.key === "Enter") {
+                document.querySelector(".cloudyimg h2").innerHTML;
+
+            }
+
+        }
+
+        let print = (id) => {
+            document.querySelector(".cloudyimg h2").innerHTML = id.value;
+        }
+
+
+
+
+
+        // function inputFun(){
+        // let temp= prompt("enter the temp?");
+        //    if (temp >=30) {
+
+        //       document.getElementById("sunnyimg").style.display="block";
+        //       document.getElementById("cloudyimg").style.display="none";
+        //    }
+        //     else if(temp<30) {
+
+        //     document.getElementById("sunnyimg").style.display="none";
+        //       document.getElementById("cloudyimg").style.display="block";
+        //    }
+        //    else{
+        //     document.write("enter coreect value");
+        //    }
+        //     }
+    </script>
+</body>
+
+</html>

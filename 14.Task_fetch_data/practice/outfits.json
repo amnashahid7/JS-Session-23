@@ -1,0 +1,66 @@
+[
+    {
+        "id":1,
+        "name":"POPLIN SHIRT",
+        "price":"PKR 3,490",
+        "color": "White",
+        "Gender":"MEN",
+        "img":"1.webp"
+    },
+    {
+        "id":2,
+        "name":"COTTON LINEN SHIRT",
+        "price":"PKR 3,690",
+        "color": "Black",
+        "Gender":"MEN",
+        "img":"2.webp"
+    },
+    {
+        "id":3,
+        "name":"VERTICAL STRIPED SHIRT",
+        "price":"PKR 3,690",
+        "color": "White",
+        "Gender":"MEN",
+        "img":"3.webp"
+    },
+    {
+        "id":4,
+        "name":"TROPIC PRINT SHIRT",
+        "price":"PKR 3,690",
+        "color": "White",
+        "Gender":"MEN",
+        "img":"4.webp"
+    },
+    {
+        "id":5,
+        "name":"VERTICAL STRIPED SHIRT",
+        "price":"PKR 3,790",
+        "color": "Green",
+        "Gender":"MEN",
+        "img":"5.webp"
+    },
+    {
+        "id":6,
+        "name":"CHECKERED SHIRT",
+        "price":"PKR 3,390",
+        "color": "Forest Green",
+        "Gender":"MEN",
+        "img":"6.webp"
+    },
+    {
+        "id":7,
+        "name":"COTTON-LINEN SHIRT",
+        "price":"PKR 3,990",
+        "color": "Black",
+        "Gender":"MEN",
+        "img":"7.webp"
+    },
+    {
+        "id":8,
+        "name":"COTTON-LINEN SHIRT",
+        "price":"PKR 4,990",
+        "color": "Rust",
+        "Gender":"MEN",
+        "img":"8.webp"
+    }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Grading System</title>
+</head>
+
+<body>
+    <h1>Grading Sysytem</h1>
+    <script>
+        totalNumber = 50;
+        let teacherName = prompt("Enter your name?");
+        console.log(teacherName);
+
+
+
+        let numbers = prompt("Enter students number separated by a coma ,").split(",");
+
+        console.log(numbers);
+
+        let percentage = numbers.map((value, key, numbers) => {
+            return(value / totalNumber * 100 + "%");
+        })
+
+        console.log(percentage);
+        grading();
+
+       
+
+        function grading(){
+            numbers.forEach((ele,key) => {
+           
+
+                if (ele <= 50 && ele >= 40) {
+                    console.log("Student "+(key+1)+ " grade is A" );
+                } else if (ele <= 40 && ele >= 30) {
+                    console.log("Student "+(key+1)+ " grade is B" );
+                } else if (ele <= 30 && ele >= 20) {
+                    console.log("Student "+(key+1)+ " grade is C" );
+                } 
+                else  
+                {
+                    console.log("Student " +(key+1)+ " grade is F" );
+                } 
+              
+            }
+        );
+        }
+    </script>
+</body>
+
+</html>

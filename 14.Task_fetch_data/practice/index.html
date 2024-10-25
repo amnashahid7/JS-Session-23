@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shirts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Montserrat+Subrayada:wght@700&family=Raleway&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .row {
+        --bs-gutter-x: 0rem;
+    }
+
+    .tag {
+        font-family: 'Montserrat Subrayada', sans-serif;
+        margin-top: 85px;
+        margin-bottom: 38px;
+
+
+    }
+
+    .cartBtn {
+        margin-left: 1303px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .w3-sidebar {
+        margin-left: 1237px;
+        margin-top: 29px;
+        margin-right: 10px;
+        border-style: solid;
+        padding: 4px;
+        border-color: #eeeeee;
+        border-width: 1px;
+        background-color: #f3f2ef;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    }
+
+    .close {
+        margin-left: 67px;
+        margin-top: 3px;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: #d7d1d1;
+    }
+
+    .shopCart {
+        font-size: medium;
+        display: inline;
+    }
+
+    .cartImg {
+        width: 100px;
+        height: 150px;
+        margin-top: 14px;
+        margin-left: 13px;
+    }
+
+    .itemName {
+        display: inline;
+    }
+
+    .itemPrice {
+        display: inline;
+        position: absolute;
+        right: 89px;
+        top: 207px;
+    }
+
+    .delIcon {
+        width: 18px;
+        height: 20px;
+        position: absolute;
+        right: 16px;
+        top: 191px;
+    }
+    .cartAddto{
+        width: 259px;
+    padding: 4px;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+        <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link navbar-light" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link navbar-light" href="#">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <button class="cartBtn btn btn-light" onclick="w3_open()">Cart</button>
+                </li>
+            </ul>
+        </div>
+
+
+    </nav>
+    <!-- Sidebar -->
+    <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
+        <h4 class="shopCart">SHOPPING CART</h4>
+        <button onclick="w3_close()" class="w3-bar-item w3-button w3-large close">CLOSE</button><br>
+        <img class="cartImg" src="images/1.webp" alt="">
+        <h6 class="itemName">POPLIN SHIRT</h6><br>
+        <p class="itemPrice">PKR 3,490</p>
+        <img class="delIcon" src="images/delete.png" alt="delete-icon">
+       
+    </div>
+
+    <section class="home">
+        <h1 class="text-center tag">Outfiters</h1>
+        <div class="container">
+            <div class="row" id="shirts">
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let file = "outfits.json";
+        let shirts = document.querySelector("#shirts");
+        async function shirtsData(file) {
+            let promiseData = await fetch(file);
+            let data = await promiseData.json();
+            data.forEach((element, key) => {
+                shirts.innerHTML += `<div class="card mx-auto mt-3" style="width: 18rem;">
+                <img src="./images/${element.img}" class="card-img-top" alt="..." style="height: 399px;">
+                <div class="card-body">
+                    <h5 class="card-title">${element.name}</h5>
+                    <p class="card-text d-flex justify-content-between"><span class="fw-bold">Price :</span><span>${element.price}</span></p>
+                    <p class="card-text d-flex justify-content-between"><span class="fw-bold">Color :</span><span>${element.color}</span></p>
+                    <p class="card-text d-flex justify-content-between"><span class="fw-bold">Gender :</span><span>${element.Gender}</span></p>
+                  <button class="cartAddto" onclick="w3_open()" > <a href="#" class="btn btn-outline-secondary d-block" >Add To Cart</a></button> 
+                    
+                    
+                </div>
+              
+            </div>`
+
+            });
+        }
+        shirtsData(file);
+
+        function w3_open() {
+            document.getElementById("mySidebar").style.width = "100";
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

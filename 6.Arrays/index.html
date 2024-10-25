@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrays in js</h1>
+    <script>
+        let array= [2.4,5.7,7,8,9];
+        console.log(array);
+        // accessing array through index value
+        console.log(array[2]);
+        array.forEach(element => {
+            console.log(element);
+        });
+        //changing value in array
+        console.log("changing value in array");
+        array[2] = "amna";
+        array.forEach(element => {
+            console.log(element);
+        });
+
+        //concert array to string
+        console.log("concert array to string");
+        let stringifyArray= array.toString(array);
+        console.log(stringifyArray);
+
+
+         //object declaration
+         console.log("object declaration");
+         let objArray={
+            "std1": "amna",
+            "std2": "ali",
+            "std3": "anna",
+         }
+         console.log(objArray);
+         
+
+         //to get length of array
+         console.log("to get length of array");
+         console.log(array.length);
+         console.log(array.sort());
+
+         //isArray() returns either true or false;
+         console.log("isArray()");
+         console.log(Array.isArray(array));
+    </script>
+</body>
+</html>

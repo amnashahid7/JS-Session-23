@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="infoPage.css">
+    <title>User Info- Web APIs Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1>User Info- Web APIs Practice</h1>
+
+    <div class="form-main">
+        <div id="response">
+
+        </div>
+        <div class="main-wrapper">
+            <h2 class="form-head">USER-INFO From</h2>
+            <form class="form-wrapper" action="#" method="post">
+                <div class="form-card">
+                    <input class="form-input" type="text" name="full_name" onkeyup="validityCheck(this)"
+                        typecheck="username" />
+                    <label class="form-label" for="full_name">Full Name</label>
+                </div>
+
+                <div class="form-card">
+                    <input class="form-input" type="email" name="email" onkeyup="validityCheck(this)"
+                        typecheck="email" />
+                    <label class="form-label" for="email">Email</label>
+                </div>
+
+                <div class="form-card">
+                    <input class="form-input" type="text" name="phone_number" onkeyup="validityCheck(this)"
+                        typecheck="number" />
+                    <label class="form-label" for="phone_number">Phone number</label>
+                </div>
+                <div class="form-card">
+                    <input class="form-input" type="text" name="password" onkeyup="validityCheck(this)"
+                        typecheck="password" />
+                    <label class="form-label" for="password">Password</label>
+                </div>
+
+
+                <div class="btn-wrap">
+                    <button type="submit" onclick="btnCheck(event)"> Submit </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validityCheck(par) {
+
+            try {
+                if (par != "") {
+                    value = par.value;
+                    type = par.getAttribute("typecheck");
+                    console.log(type);
+                    switch (type) {
+                        case "username":
+                            if (value.match(/^[a-zA-Z0-9]*$/)) {
+                                document.getElementById("response").innerHTML =
+                                    `<span class="alert alert-success">Data is in correct formate</span>`;
+                            } else {
+                                throw {
+                                    name: "Syntax Error",
+                                    message: " NO Special Character "
+                                };
+                            }
+                            break;
+                        case "email":
+                            if (value.includes("@") && value.includes(".com")) {
+                                document.getElementById("response").innerHTML =
+                                    `<span class="alert alert-success">Data is in correct formate</span>`;
+                            } else {
+                                throw {
+                                    name: "Syntax Error",
+                                    message: " Missing '@' and '.com' in field "
+                                };
+                            }
+                            break;
+                        case "number":
+                            console.log(value.length);
+
+                            if (value.includes("-") && value.length == 12) {
+                                document.getElementById("response").innerHTML =
+                                    `<span class="alert alert-success">Data is in correct formate</span>`;
+
+                            } else {
+                                throw {
+                                    name: "Syntax Error",
+                                    message: " Length should be 12 digit and include dash(-)"
+                                };
+                            }
+                            break;
+                        case "password":
+                            //let pattern = /^[ ]*$/;
+                            if (!value.match(/^\s|\s$/)) {
+                                document.getElementById("response").innerHTML =
+                                    `<span class="alert alert-success">Data is in correct formate</span>`;
+                            } else {
+                                throw {
+                                    name: "Syntax Error",
+                                    message: " Anything other then Space"
+                                };
+                            }
+                            break;
+
+                        default:
+                            alert("default case");
+                            break;
+                    }
+                }
+
+            } catch (error) {
+                {
+                    document.getElementById("response").innerHTML =
+                        `<span class="alert alert-warning">${error.name}:${error.message}</span>`;
+                }
+            }
+      function btnCheck(event){
+        event.preventDefault();
+        alert("err");
+            // for (var i = 0; i <= input.length; i++) {
+            //     if (input[i].validityCheck() == false) {
+            //         btn.disabled = "disabled";
+            //     } else {
+            //         btn.disabled = false;
+            //     }
+            // }
+        }
+            // let fields = document.querySelectorAll('form-main > input')
+            // let submitButton = document.querySelector('form-main > button')
+
+            // fields = Array.from(fields) // Turn fields into an Array to access the ".every" method.
+
+            // fields.forEach(field => {
+            //     field.addEventListener('keyup', () => {
+            //         submitButton.disabled = !fields.every(field => field.value)
+            //     })
+            // })
+        }
+    </script>
+</body>
+
+</html>

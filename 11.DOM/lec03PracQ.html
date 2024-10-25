@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PRACTICE QUESTION</title>
+    <style>
+        .even{
+            background-color: blue;
+        }
+        .odd{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM PRACTICE QUESTION</h1>
+    <ol id="one">
+        <li>BANANA</li>
+        <li>MANGO</li>
+        <li>APPLE</li>
+        <li>ORANGE</li>
+        <li>WATER-MELON</li>
+        <li>MELON</li>
+    </ol>
+    <ol id="two">
+        <li>BANANA</li>
+        <li>MANGO</li>
+        <li>APPLE</li>
+        <li>ORANGE</li>
+        <li>WATER-MELON</li>
+        <li>MELON</li>
+    </ol>
+    <ol id="three">
+        <li>BANANA</li>
+        <li>MANGO</li>
+        <li>APPLE</li>
+        <li>ORANGE</li>
+        <li>WATER-MELON</li>
+        <li>MELON</li>
+    </ol>
+    <script>
+        // let li = document.getElementsByTagName("li");
+        // console.log(li);
+        // for (let i = 0; i < li.length; i++) {
+        //     if (i % 2 == 0) {
+        //         li[i].classList.add("even");
+        //     } else {
+        //         li[i].classList.add("odd");
+        //     }
+            
+        // }
+
+        let ol= document.getElementsByTagName("ol");
+        console.log(ol);
+       for (let i = 0; i < ol.length; i++) {
+        if(i % 2 == 1)
+        {
+            ol[i].classList.add("even");
+            
+        }
+        else{
+            ol[i].classList.add("odd");
+            
+        }
+        
+       }
+    </script>
+</body>
+</html>
